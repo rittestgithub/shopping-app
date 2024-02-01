@@ -37,9 +37,7 @@ const NavBar = () => {
             </Link>
           </li>
           <li className="nav-item">
-            {/* <Link className="nav-link" to="#" style={{ color: '#fff' }}>
-              About
-            </Link> */}
+            
             <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             category
@@ -47,7 +45,7 @@ const NavBar = () => {
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="Mensclothing">Men</a></li>
             <li><a class="dropdown-item" href="Womens">women</a></li>
-            {/* <li><a class="dropdown-divider"></li> */}
+          
             <li><a class="dropdown-item" href="/Jwellery">jwellery</a></li>
           </ul>
         </li>
@@ -79,19 +77,14 @@ const NavBar = () => {
             </Link>
           </li>
 
-          {/* <li className="nav-item">
-            <Link className="nav-link mt-1" to="/Contact">
-              <button className='btn btn-sm btn-danger'>Login</button>
-            </Link>
-          </li> */}
           <li className="nav-item">
           {isAuthenticated ? (
-            // If the user is authenticated, show the "Logout" button
+            
             <Link className="nav-link mt-1" to="/Contact" onClick={() => dispatch(userLogout())}>
             <button className='btn btn-sm btn-danger'>Logout</button>
           </Link>
           ) : (
-            // If the user is not authenticated, show the "Login" button
+            
             <Link className="nav-link mt-1" to="/Contact">
               <button className='btn btn-sm btn-danger'>Login</button>
             </Link>
