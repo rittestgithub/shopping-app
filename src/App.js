@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/main
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import NavBar from './Components/Nav';
@@ -13,19 +18,31 @@ import { useSelector } from 'react-redux';
 import Jwellery from './Components/Jwellery';
 import Womens from './Components/Womens';
 import Mensclothing from './Components/Mensclothing';
+<<<<<<< HEAD
 
  const ProtectedRoute = ({ element, path }) => {
 
   const isAuthenticated = useSelector((state) => state.cartReducer.isAuthenticated);
   localStorage.setItem('isAuthenticated', isAuthenticated);
 
+=======
+const ProtectedRoute = ({ element, path }) => {
+  
+  const isAuthenticated = useSelector((state) => state.cartReducer.isAuthenticated);
+  localStorage.setItem('isAuthenticated', isAuthenticated);
+  
+>>>>>>> origin/main
 
   return isAuthenticated ? (
     element
   ) : (
     <Navigate state={{ from: path }} replace to="/Contact" />
   );
+<<<<<<< HEAD
  };
+=======
+};
+>>>>>>> origin/main
 
 const App = () => {
   const bodyStyle = {
@@ -37,14 +54,29 @@ const App = () => {
       <NavBar />
       <div style={bodyStyle}>
         <Routes>
+<<<<<<< HEAD
           
           <Route exact path="/Products" element={<Products />} />
           
           <Route exact path="/Products/:id"element={<ProductDetails/>}/>
+=======
+          {/* <Route
+            exact
+            path="/Products"
+            element={<ProtectedRoute element={<Products />} path="/Products" />}
+          /> */}
+          <Route exact path="/Products" element={<Products />} />
+          <Route
+            exact
+            path="/Products/:id"
+            element={<ProtectedRoute element={<ProductDetails />} path="/Products/:id" />}
+          />
+>>>>>>> origin/main
           <Route exact path="/Home" element={<Home />} />
           <Route exact path="/" element={<Home />} />
           <Route exact path="/About" element={<About />} />
           <Route exact path="/Contact" element={<Contact />} />
+<<<<<<< HEAD
           <Route exact path="/Jwellery" element={<Jwellery />} />
           <Route exact path="/Womens" element={<Womens />} />
           <Route exact path="/Mensclothing" element={<Mensclothing />} />
@@ -53,12 +85,27 @@ const App = () => {
             path="/Cart"
             element={<ProtectedRoute element={<Cart />} path="/Cart" />}
           /> 
+=======
+          <Route exact path="/Jwellery" element={<Jwellery/>} />
+          <Route exact path="/Womens" element={<Womens/>} />
+          <Route exact path="/Mensclothing" element={<Mensclothing/>} />
+           {/* <Route
+            exact
+            path="/Cart"
+            element={<ProtectedRoute element={<Cart />} path="/Cart" />}
+          />  */}
+           <Route exact path="/Cart" element={<Cart />} /> 
+
+>>>>>>> origin/main
           <Route
             exact
             path="/Checkout"
             element={<ProtectedRoute element={<Checkout />} path="/Checkout" />}
           />
+<<<<<<< HEAD
           
+=======
+>>>>>>> origin/main
           <Route path="*" element={<Error />} />
         </Routes>
       </div>
