@@ -89,7 +89,7 @@ const Jwellery = () => {
     return (
         <div className="container mt-4">
 
-  <h2>Jwellery Products</h2>
+  
 
   <h2>Jewellery Products</h2>
 
